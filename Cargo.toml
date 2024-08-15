@@ -1,13 +1,13 @@
 [workspace]
 resolver = "2"
-members = ["leptonic", "leptonic-theme"]
+members = ["leptoxygen", "leptonic-theme"]
 exclude = ["examples"]
 
 [workspace.package]
 version = "0.5.0"
 
 [workspace.dependencies]
-leptonic = { path = "./leptonic", default-features = false }
+leptonic = { path = "leptoxygen", default-features = false }
 leptonic_theme = { path = "./leptonic-theme", default-features = false }
 
 [profile.release]
