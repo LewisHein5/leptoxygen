@@ -21,7 +21,7 @@ pub fn PageAtomButton() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    use leptonic::atoms::prelude as atoms;
+                    use leptoxygen::atoms::prelude as atoms;
                     use leptos_use::use_window;
 
                     view! {

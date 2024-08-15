@@ -29,7 +29,7 @@ pub fn PageIcon() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    use leptonic::prelude::*;
+                    use leptoxygen::prelude::*;
 
                     view! {
                         <Icon icon=icondata::BsFolderFill style="font-size: 6em;"/>

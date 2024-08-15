@@ -39,16 +39,16 @@ pub fn PageInstallation() -> impl IntoView {
                 <AnchorLink href="#custom-setup" description="Custom setup"/>
             </H2>
 
-            <P>"Start by adding "<Code inline=true>"leptonic"</Code>" as a dependency of your app. "</P>
+            <P>"Start by adding "<Code inline=true>"leptoxygen"</Code>" as a dependency of your app. "</P>
 
             <Code>
                 {indoc!(r"
-                    cargo add leptonic
+                    cargo add leptoxygen
                 ")}
             </Code>
 
             <P>
-                "Leptonic comes with default styling in form of the "<LinkExt href="https://github.com/lpotthast/leptonic-theme/tree/main" target=LinkExtTarget::Blank>"leptonic-theme"</LinkExt>" crate. "
+                "Leptonic comes with default styling in form of the "<LinkExt href="https://github.com/lpotthast/leptonic-theme/tree/main" target=LinkExtTarget::Blank>"leptoxygen-theme"</LinkExt>" crate. "
                 "The themes, as well as other static files, are automatically copied to your project root directory when building your application. "
                 "You have to tell Leptonic where you want these files to be stored. "
                 "We recommend not excluding them from your VCS."
@@ -58,7 +58,7 @@ pub fn PageInstallation() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    [package.metadata.leptonic]
+                    [package.metadata.leptoxygen]
                     # REQUIRED: Leptonic's build-script will copy the Leptonic themes to this directory.
                     style-dir = "style"
 
@@ -71,7 +71,7 @@ pub fn PageInstallation() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    @import "./leptonic/leptonic-themes";
+                    @import "./leptoxygen/leptoxygen-themes";
                 "#)}
             </Code>
 
@@ -98,17 +98,17 @@ pub fn PageInstallation() -> impl IntoView {
             <Code>
                 {indoc!(r#"
                     [build]
-                    # `leptonic` depends on some `leptos-use` functions requiring this opt-in. This may change in the future.
+                    # `leptoxygen` depends on some `leptos-use` functions requiring this opt-in. This may change in the future.
                     rustflags = ["--cfg=web_sys_unstable_apis"]
                 "#)}
             </Code>
 
-            <P>"You should now be ready to use leptonic components in your leptos app. Let's set up your first component."</P>
+            <P>"You should now be ready to use leptoxygen components in your leptos app. Let's set up your first component."</P>
 
 
             <P>"Similar to Leptos, this crate comes with a prelude module."</P>
 
-            <P>"Just " <Code inline=true>"use leptonic::prelude::*;"</Code> " and you are ready to use any component mentioned in this book."</P>
+            <P>"Just " <Code inline=true>"use leptoxygen::prelude::*;"</Code> " and you are ready to use any component mentioned in this book."</P>
 
             <P>
                 "Leptonic provides the "<Code inline=true>"<Root>"</Code>" component. "
@@ -121,7 +121,7 @@ pub fn PageInstallation() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    use leptonic::prelude::*;
+                    use leptoxygen::prelude::*;
 
                     #[component]
                     pub fn App() -> impl IntoView {

@@ -297,7 +297,7 @@ pub fn Layout(#[prop(optional)] children: Option<Children>) -> impl IntoView {
     let logo = move || {
         view! {
             <Link href="">
-                <img src="/res/leptonic.svg" id="logo" alt="Leptonic logo"/>
+                <img src="/res/leptoxygen.svg" id="logo" alt="Leptonic logo"/>
             </Link>
         }
     };

@@ -32,8 +32,8 @@ pub fn PageAtomAnchorLink() -> impl IntoView {
 
             <Code>
                 {indoc!(r##"
-                    use leptonic::atoms::link::AnchorLink;
-                    use leptonic::components::typography::H1;
+                    use leptoxygen::atoms::link::AnchorLink;
+                    use leptoxygen::components::typography::H1;
 
                     view! {
                         <H2 id="my-section-anchor">

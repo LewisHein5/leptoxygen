@@ -24,14 +24,14 @@ pub fn generate(path: impl AsRef<Path>) -> Result<()> {
         .extract(path)
         .with_context(|| format!("Could not extract theme into '{path:?}'"))?;
 
-    let themes_file_path = path.join("leptonic-themes.scss");
+    let themes_file_path = path.join("leptoxygen-themes.scss");
     let mut file = std::fs::OpenOptions::new()
         .create(true)
         .write(true)
         .append(false)
         .truncate(true)
         .open(&themes_file_path)
-        .context("Could not find leptonic-themes.scss after copying comp-time created SCSS_DIR. This must be a bug.")?;
+        .context("Could not find leptoxygen-themes.scss after copying comp-time created SCSS_DIR. This must be a bug.")?;
 
     file.write_all(
         indoc!(

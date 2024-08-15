@@ -46,7 +46,7 @@ pub fn PageLink() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    <LinkExt href="https://github.com/lpotthast/leptonic" target=LinkExtTarget::Blank>
+                    <LinkExt href="https://github.com/lpotthast/leptoxygen" target=LinkExtTarget::Blank>
                         <Icon id="github-icon" icon=icondata::BsGithub style="font-size: 3em;"/>
                     </LinkExt>
                 "#)}

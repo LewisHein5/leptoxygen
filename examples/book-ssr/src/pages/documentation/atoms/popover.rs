@@ -24,10 +24,10 @@ pub fn PageAtomPopover() -> impl IntoView {
 
             <Code>
                 {indoc!(r#"
-                    use leptonic::atoms::button::Button;
-                    use leptonic::atoms::hoverable::Hoverable;
-                    use leptonic::atoms::link::AnchorLink;
-                    use leptonic::atoms::popover::{Popover, PopoverContent, PopoverContext, PopoverTrigger};
+                    use leptoxygen::atoms::button::Button;
+                    use leptoxygen::atoms::hoverable::Hoverable;
+                    use leptoxygen::atoms::link::AnchorLink;
+                    use leptoxygen::atoms::popover::{Popover, PopoverContent, PopoverContext, PopoverTrigger};
 
                     view! {
                         <Popover disabled=false>
