@@ -17,7 +17,7 @@ pub fn PageThemes() -> impl IntoView {
         </P>
 
         <P>
-            "All styling is provided through the "<LinkExt href="https://github.com/lpotthast/leptonic/tree/main/leptonic-theme" target=LinkExtTarget::Blank>"leptonic-theme"</LinkExt>" crate. "
+            "All styling is provided through the "<LinkExt href="https://github.com/lpotthast/leptonic/tree/main/leptonic-theme" target=LinkExtTarget::Blank>"leptoxygen-theme"</LinkExt>" crate. "
             "When used as a build.rs dependency, this crate can write out SCSS code, styling the Leptonic components in two themes: "<Code inline=true>"light"</Code>" and "<Code inline=true>"dark"</Code>"."
         </P>
 
@@ -53,13 +53,13 @@ pub fn PageThemes() -> impl IntoView {
 
         <P>
             "Have a look at this excerpt from this book's main "<Code inline=true>"style.scss"</Code>" file, "
-            "showing you how we include the leptonic standard themes previously written by our build script "
+            "showing you how we include the leptoxygen standard themes previously written by our build script "
             "and overwrite a few variables to meet our design needs."
         </P>
 
         <Code>
             {indoc!(r#"
-                @import "../generated/leptonic/leptonic-themes";
+                @import "../generated/leptoxygen/leptoxygen-themes";
 
                 [data-theme="light"] {
                     --brand-color: #e66956;

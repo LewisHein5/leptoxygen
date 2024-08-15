@@ -30,7 +30,7 @@ pub struct Leptonic {
 #[allow(clippy::too_many_lines)]
 pub fn Root<T>(
     /// Root directory of JS files used for dynamic script imports. Defaults to "js", as this is commonly used.
-    /// Change this if you chose a non-standard location for `[package.metadata.leptonic] > js-dir`.
+    /// Change this if you chose a non-standard location for `[package.metadata.leptoxygen] > js-dir`.
     #[allow(unused_variables)]
     #[prop(into, default = Oco::Borrowed("js"))]
     runtime_js_dir: Oco<'static, str>,
@@ -144,7 +144,7 @@ where
                     .ok_or(Error::DocumentIndeterminable)?
                     .unchecked_into::<web_sys::HtmlElement>()
                     .style()
-                    .set_property("--leptonic-vh", format!("{inner_height}px").as_str())
+                    .set_property("--leptoxygen-vh", format!("{inner_height}px").as_str())
                     .map_err(|_err| Error::SetPropertyFailed)?;
             }
         }

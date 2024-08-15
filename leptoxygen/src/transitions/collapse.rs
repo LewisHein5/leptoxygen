@@ -42,7 +42,7 @@ pub fn Collapse(
     });
 
     view! {
-        <div class="leptonic-collapse"
+        <div class="leptoxygen-collapse"
             class:width=move || {axis == CollapseAxis::X}
             class:height=move || {axis == CollapseAxis::Y}
             style=move || style.get()

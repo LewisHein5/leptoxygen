@@ -98,7 +98,7 @@ pub fn ColorPalette(
     });
 
     view! {
-        <div class="leptonic-color-palette"
+        <div class="leptoxygen-color-palette"
             node_ref=palette_el
             id=id
             style=style

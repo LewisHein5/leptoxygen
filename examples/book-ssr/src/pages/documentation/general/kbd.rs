@@ -89,17 +89,17 @@ pub fn PageKbd() -> impl IntoView {
 
         <Code>
             {indoc!(r"
-                --leptonic-kbd-key-color
-                --leptonic-kbd-key-background-color
-                --leptonic-kbd-key-margin
-                --leptonic-kbd-key-padding
-                --leptonic-kbd-key-border-radius
-                --leptonic-kbd-key-border-color
-                --leptonic-kbd-concatenate-color
-                --leptonic-kbd-concatenate-background-color
-                --leptonic-kbd-concatenate-margin
-                --leptonic-kbd-concatenate-padding
-                --leptonic-kbd-concatenate-border-radius
+                --leptoxygen-kbd-key-color
+                --leptoxygen-kbd-key-background-color
+                --leptoxygen-kbd-key-margin
+                --leptoxygen-kbd-key-padding
+                --leptoxygen-kbd-key-border-radius
+                --leptoxygen-kbd-key-border-color
+                --leptoxygen-kbd-concatenate-color
+                --leptoxygen-kbd-concatenate-background-color
+                --leptoxygen-kbd-concatenate-margin
+                --leptoxygen-kbd-concatenate-padding
+                --leptoxygen-kbd-concatenate-border-radius
             ")}
         </Code>
     }

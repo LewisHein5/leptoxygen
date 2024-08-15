@@ -12,7 +12,7 @@ pub fn Anchor(
     #[prop(into, optional)] children: Option<Children>,
 ) -> impl IntoView {
     view! {
-        <Link href=href.to_string() title=title.to_string() class="leptonic-anchor">
+        <Link href=href.to_string() title=title.to_string() class="leptoxygen-anchor">
             { match children {
                 Some(children) => children().into_view(),
                 None => "#".into_view(),

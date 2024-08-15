@@ -30,8 +30,8 @@ pub fn DateTimeInput(
     let id = id.map(Oco::into_owned);
 
     let class = class
-        .map(|it| Oco::from(format!("leptonic-input datetime-selected {it}")))
-        .unwrap_or_else(|| Oco::from("leptonic-input datetime-selected "));
+        .map(|it| Oco::from(format!("leptoxygen-input datetime-selected {it}")))
+        .unwrap_or_else(|| Oco::from("leptoxygen-input datetime-selected "));
 
     let style = margin.map(|it| format!("--margin: {it}"));
 

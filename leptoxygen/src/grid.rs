@@ -16,7 +16,7 @@ pub fn Grid(
             id=id
             class=class
             style=style
-            style=("--leptonic-grid-spacing", format!("{spacing}"))
+            style=("--leptoxygen-grid-spacing", format!("{spacing}"))
         >
             {children()}
         </leptonic-grid-container>
@@ -37,7 +37,7 @@ pub fn Row(
             id=id
             class=class
             style=style
-            style=("--leptonic-grid-spacing", spacing.map(|spacing| format!("{spacing}")))
+            style=("--leptoxygen-grid-spacing", spacing.map(|spacing| format!("{spacing}")))
         >
             {children()}
         </leptonic-grid-row>

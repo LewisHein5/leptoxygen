@@ -57,7 +57,7 @@ pub fn main() -> Result<()> {
     #[allow(unused_variables)]
     let js_dir = root_dir.join(&metadata.relative_js_dir);
 
-    let theme_dir = style_dir.join("leptonic");
+    let theme_dir = style_dir.join("");
     leptonic_theme::generate(&theme_dir).unwrap();
     log(
         Level::Info,
@@ -117,12 +117,12 @@ fn read_leptonic_metadata(cargo_toml_path: &PathBuf) -> Result<Option<LeptonicMe
         .package()
         .metadata
         .as_ref()
-        .and_then(|m| m.get("leptonic"));
+        .and_then(|m| m.get("leptoxygen"));
 
     if meta.is_none() {
         log(
             Level::Debug,
-            "Aborting. Root dir is a package without specifying leptonic metadata.",
+            "Aborting. Root dir is a package without specifying leptoxygen metadata.",
         );
         return Ok(None);
     }

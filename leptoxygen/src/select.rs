@@ -215,10 +215,10 @@ where
     });
 
     view! {
-        // TODO: If possible, move this focus-tracking functionality to our main leptonic-select element. it requires the focus() method to be available.
+        // TODO: If possible, move this focus-tracking functionality to our main leptoxygen-select element. it requires the focus() method to be available.
         <div
             node_ref=wrapper
-            class="leptonic-select-wrapper"
+            class="leptoxygen-select-wrapper"
             tabindex=0
             on:blur=move |_| set_focused.set(false)
             on:focus=move |_| set_focused.set(true)
@@ -457,10 +457,10 @@ where
     });
 
     view! {
-        // TODO: If possible, move this focus-tracking functionality to our main leptonic-select element. it requires the focus() method to be available.
+        // TODO: If possible, move this focus-tracking functionality to our main leptoxygen-select element. it requires the focus() method to be available.
         <div
             node_ref=wrapper
-            class="leptonic-select-wrapper"
+            class="leptoxygen-select-wrapper"
             tabindex=0
             on:blur=move |_| set_focused.set(false)
             on:focus=move |_| set_focused.set(true)
@@ -734,10 +734,10 @@ where
     });
 
     view! {
-        // TODO: If possible, move this focus-tracking functionality to our main leptonic-select element. it requires the focus() method to be available.
+        // TODO: If possible, move this focus-tracking functionality to our main leptoxygen-select element. it requires the focus() method to be available.
         <div
             node_ref=wrapper
-            class="leptonic-select-wrapper"
+            class="leptoxygen-select-wrapper"
             tabindex=0
             on:blur=move |_| set_focused.set(false)
             on:focus=move |_| set_focused.set(true)

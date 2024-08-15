@@ -205,7 +205,7 @@ pub fn Layout(#[prop(optional)] children: Option<Children>) -> impl IntoView {
     let logo = move || {
         view! {
             <Link href="">
-                <img src="/res/leptonic.svg" id="logo" alt="Leptonic logo"/>
+                <img src="/res/leptoxygen.svg" id="logo" alt="Leptonic logo"/>
             </Link>
         }
     };
@@ -279,7 +279,7 @@ pub fn Layout(#[prop(optional)] children: Option<Children>) -> impl IntoView {
             </div>
         </AppBar>
 
-        <Box id="content" style=format!("height: calc(var(--leptonic-vh, 100vh) - {APP_BAR_HEIGHT}); max-height: calc(var(--leptonic-vh, 100vh) - {APP_BAR_HEIGHT});")>
+        <Box id="content" style=format!("height: calc(var(--leptoxygen-vh, 100vh) - {APP_BAR_HEIGHT}); max-height: calc(var(--leptoxygen-vh, 100vh) - {APP_BAR_HEIGHT});")>
             {
                 match children {
                     Some(children) => {

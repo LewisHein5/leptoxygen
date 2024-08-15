@@ -21,7 +21,7 @@ pub fn PageChangelog() -> impl IntoView {
             <li>"Tabs are now SSR compatible. Rendering order changed to make this possible. This should not affect anyone."</li>
             <li>"Toggles are now SSR compatible. Rendering of the (optional) icons changed. This should only affect you if custom styling is in play."</li>
             <li>"Tables are now SSR compatible. Components were renamed to `TableHeader`, `TableBody`, `TableRow`, `TableHeaderCell` and `TableCell`."</li>
-            <li>"The `build.rs` script, which previously had to be create by the consumer is now longer required. It was moved into leptonic itself and will automatically take care of copying files required for a build."</li>
+            <li>"The `build.rs` script, which previously had to be create by the consumer is now longer required. It was moved into leptoxygen itself and will automatically take care of copying files required for a build."</li>
             <li>"Getting started instructions are updated."</li>
             <li>"The `Code` block component now has a `Copy to clipboard` button (thanks to https://github.com/wt)."</li>
             <li>"A `SelectOption` no longer requires to be `Eq`."</li>
@@ -60,7 +60,7 @@ pub fn PageChangelog() -> impl IntoView {
 
         <H3>"Removed:"</H3>
         <ul>
-            <li>"The `Callback` and `Callable` types moved into leptos itself! They should still be accessible on most use-sites as they are now imported with `use leptos::*`, which should already be present in most places the leptonic Callback was used before."</li>
+            <li>"The `Callback` and `Callable` types moved into leptos itself! They should still be accessible on most use-sites as they are now imported with `use leptos::*`, which should already be present in most places the leptoxygen Callback was used before."</li>
         </ul>
 
         <H2>"0.2.0"</H2>
@@ -74,7 +74,7 @@ pub fn PageChangelog() -> impl IntoView {
                 " In case of a callback, the user wants fine control over how a new value is handled."
                 " The input component is the first one using it, as mentioned in the `Changed` section."
             </li>
-            <li>"The Select, OptionalSelect and Multiselect components now accept a `class` prop with which custom classes can be attached to a rendered <leptonic-select> element."</li>
+            <li>"The Select, OptionalSelect and Multiselect components now accept a `class` prop with which custom classes can be attached to a rendered <leptoxygen-select> element."</li>
             <li>"The `Kbd` component together with `KbdShortcut`, displaying keyboard keys and shortcuts."</li>
             <li>"The `Chip` component now accepts custom `id`, `class` and `style` props."</li>
             <li>"You can now use the new `--slider-bar-background-image` CSS variable to style the bar of a `Slider` with more control. Defaults to `none`. `--slider-bar-background-color` is still the preferred way to style the bar if no image is needed. The image property will overwrite the color."</li>
@@ -97,7 +97,7 @@ pub fn PageChangelog() -> impl IntoView {
             <li>"The TiptapEditor `set_value` prop is no longer generic. It now expect an `Option<Out<TiptapContent>>`, which can either be a `WriteSignal` or a custom `Callback`."</li>
             <li>
                 "All components using custom attributes now render them with a \"data-\" prefix, allowing them to be standard-compliant and distinguishable from well-known / standard attributes."
-                " `leptonic-theme` styling changed appropriately."
+                " `leptoxygen-theme` styling changed appropriately."
             </li>
             <li>"Prop `max` of the ProgressBar is now a MaybeSignal."</li>
             <li>"Prop `progress` of the ProgressBar is now a MaybeSignal."</li>

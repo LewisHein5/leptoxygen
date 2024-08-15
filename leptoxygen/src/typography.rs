@@ -166,7 +166,7 @@ pub fn Code(
     let copy_btn = show_copy_button.then(|| {
         view!(
             <Button
-                class="leptonic-code-copy-button"
+                class="leptoxygen-code-copy-button"
                 variant=ButtonVariant::Flat
                 on_click=move |_| copy_to_clipboard(
                     code_text.with_value(|c| c.clone()),
@@ -228,5 +228,5 @@ fn copy_to_clipboard<T: AsRef<str>, S: Fn() + 'static, E: Fn() + 'static>(
     _on_success: S,
     _on_err: E,
 ) {
-    tracing::warn!("Clipboard related functionality requires leptonic's 'Clipboard' feature as well as '--cfg=web_sys_unstable_apis'.");
+    tracing::warn!("Clipboard related functionality requires leptoxygen's 'Clipboard' feature as well as '--cfg=web_sys_unstable_apis'.");
 }

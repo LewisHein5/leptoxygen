@@ -73,12 +73,12 @@ book-build-and-package:
     - book-test
   artifacts:
     paths:
-      - examples/book-ssr/deployment/leptonic-book.jobspec.final.hcl
+      - examples/book-ssr/deployment/leptoxygen-book.jobspec.final.hcl
   before_script:
     - echo -n "$CI_REGISTRY_PASSWORD" | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
   script:
     - cd examples/book-ssr
-    - image="${CI_REGISTRY_IMAGE}/leptonic-book"
+    - image="${CI_REGISTRY_IMAGE}/leptoxygen-book"
     - tag="${CI_COMMIT_SHA}"
     - docker pull "${image}:latest" || true
     - echo "Finalizing Dockerfile"
@@ -95,10 +95,10 @@ book-build-and-package:
     - docker push "${image}:${tag}"
     - docker push "${image}:latest"
     - echo "Creating final deployment spec..."
-    - cp deployment/leptonic-book.jobspec.hcl deployment/leptonic-book.jobspec.final.hcl
-    - sed -i "s/{{TAG}}/${tag}/g" "deployment/leptonic-book.jobspec.final.hcl"
-    - sed -i "s/{{REGISTRY_USERNAME}}/${REGISTRY_USERNAME}/g" "deployment/leptonic-book.jobspec.final.hcl"
-    - sed -i "s/{{REGISTRY_TOKEN}}/${REGISTRY_TOKEN}/g" "deployment/leptonic-book.jobspec.final.hcl"
+    - cp deployment/leptoxygen-book.jobspec.hcl deployment/leptoxygen-book.jobspec.final.hcl
+    - sed -i "s/{{TAG}}/${tag}/g" "deployment/leptoxygen-book.jobspec.final.hcl"
+    - sed -i "s/{{REGISTRY_USERNAME}}/${REGISTRY_USERNAME}/g" "deployment/leptoxygen-book.jobspec.final.hcl"
+    - sed -i "s/{{REGISTRY_TOKEN}}/${REGISTRY_TOKEN}/g" "deployment/leptoxygen-book.jobspec.final.hcl"
 
 book-validate-deployment:
   <<: *deploy_configuration
@@ -108,7 +108,7 @@ book-validate-deployment:
     - book-build-and-package
   script:
     - cd examples/book-ssr/deployment
-    - nomad job validate leptonic-book.jobspec.final.hcl
+    - nomad job validate leptoxygen-book.jobspec.final.hcl
 
 book-plan-deployment:
   <<: *deploy_configuration
@@ -123,7 +123,7 @@ book-plan-deployment:
     #   0: No allocations created or destroyed.
     #   1: Allocations created or destroyed.
     # 255: Error determining plan results.
-    - nomad job plan leptonic-book.jobspec.final.hcl
+    - nomad job plan leptoxygen-book.jobspec.final.hcl
   allow_failure:
     exit_codes: 1
 
@@ -136,4 +136,4 @@ book-run-deployment:
     - book-plan-deployment
   script:
     - cd examples/book-ssr/deployment
-    - nomad job run leptonic-book.jobspec.final.hcl
+    - nomad job run leptoxygen-book.jobspec.final.hcl
